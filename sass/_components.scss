@@ -3,6 +3,8 @@
 .logo {
     height: 6.25rem;
     margin-left: 2.5rem;
+    background-color: var(--color-primary);
+    clip-path: circle(50% at 50% 50%);
 }
 ///////////////////////////////////////
 //Search Box
