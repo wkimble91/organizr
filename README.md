@@ -1,2 +1,2 @@
-# organiz
+# organizr
 Social Media Mockup
