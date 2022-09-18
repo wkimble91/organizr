@@ -5,6 +5,13 @@
     margin-left: 2rem;
     background-color: var(--color-primary);
     clip-path: circle(50% at 50% 50%);
+
+    @media only screen and (max-width: $breakp-medium) {
+        height: 4.5rem;
+    }
+    @media only screen and (max-width: $breakp-smallest) {
+        height: 4rem;
+    }
 }
 ///////////////////////////////////////
 //Search Box
@@ -13,6 +20,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: $breakp-smallest) {
+        order: 1;
+        flex: 0 0 100%;
+    }
+
     &__input {
         font-family: inherit;
         font-size: inherit;
@@ -25,10 +38,19 @@
         transition: all 0.2s;
         margin-right: -3.5rem;
 
+        @media only screen and (max-width: $breakp-smallest) {
+            margin-right: -3.5rem;
+            margin-left: -1.3rem;
+        }
+
         &:focus {
             outline: none;
             width: 100%;
             background-color: var(--color-grey-light-3);
+
+            @media only screen and (max-width: $breakp-smallest) {
+                width: 90%;
+            }
         }
         &::-webkit-input-placeholder {
             font-weight: 100;
@@ -93,6 +115,11 @@
         background-color: var(--color-primary);
         top: 3.8rem;
         right: 3.5rem;
+
+        @media only screen and (max-width: $breakp-smallest) {
+            top: 2.2rem;
+            right: 3.4rem;
+        }
     }
     &__user-photo {
         height: 3.75rem;
@@ -106,11 +133,25 @@
     font-size: 1.4rem;
     list-style: none;
     margin-top: 3.5rem;
+
+    @media only screen and (max-width: $breakp-medium) {
+        font-size: 1.2rem;
+        margin: 0;
+        display: flex;
+    }
+
     &__item {
         position: relative;
 
         &:not(:last-child) {
             margin-bottom: 0.5rem;
+            @media only screen and (max-width: $breakp-medium) {
+                margin-bottom: 0rem;
+            }
+        }
+
+        @media only screen and (max-width: $breakp-medium) {
+            flex: 1 1;
         }
     }
 
@@ -146,15 +187,37 @@
         padding: 1.5rem 3rem;
         position: relative;
         z-index: 10;
-
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: $breakp-medium) {
+            padding: 1.5rem 0.5rem;
+            justify-content: center;
+        }
+
+        @media only screen and (max-width: $breakp-small) {
+            padding: 1.5rem 0.5rem;
+            flex-direction: column;
+        }
     }
     &__icon {
         width: 1.75rem;
         height: 1.75rem;
         margin-right: 2rem;
         fill: currentColor;
+
+        @media only screen and (max-width: $breakp-medium) {
+            width: 1rem;
+            height: 1rem;
+            margin-right: 1rem;
+        }
+
+        @media only screen and (max-width: $breakp-small) {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 0;
+            margin-bottom: 0.7rem;
+        }
     }
 }
 ///////////////////////////////////////
@@ -164,6 +227,10 @@
     color: var(--color-grey-light-4);
     text-align: center;
     padding: 2.5rem;
+
+    @media only screen and (max-width: $breakp-medium) {
+        display: none;
+    }
 }
 ///////////////////////////////////////
 //Gallery
@@ -186,10 +253,18 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
+
+        @media only screen and (max-width: $breakp-small) {
+            font-size: 1.8rem;
+            padding: 2rem 1.2rem;
+        }
     }
     &__stars {
         margin-right: auto;
         display: flex;
+        @media only screen and (max-width: $breakp-small) {
+            margin-bottom: 0.8rem;
+        }
     }
     &__icon-star,
     &__icon-location {
@@ -201,6 +276,9 @@
         font-size: 1.2rem;
         display: flex;
         vertical-align: center;
+        @media only screen and (max-width: $breakp-small) {
+            font-size: 1rem;
+        }
     }
     &__icon-location {
         margin-right: 0.5rem;
@@ -208,25 +286,40 @@
 
     &__rating {
         background-color: var(--color-primary);
-        color: white;
+        color: #fff;
         margin-left: 3rem;
-        padding: 1.5rem 2rem;
+        padding: 0 2.25rem;
         align-self: stretch;
 
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        @media only screen and (max-width: $breakp-small) {
+            padding: 0 1.5rem;
+            margin-left: 1rem;
+        }
     }
+
     &__rating-average {
         font-size: 2.25rem;
-        font-family: 300;
-        margin-bottom: 0.5rem;
+        font-weight: 300;
+        margin-bottom: -3px;
+
+        @media only screen and (max-width: $breakp-small) {
+            font-size: 1.8rem;
+            margin-top: 0.6rem;
+        }
     }
+
     &__rating-count {
         font-size: 0.8rem;
-        font-weight: 600;
         text-transform: uppercase;
+
+        @media only screen and (max-width: $breakp-small) {
+            font-size: 0.5rem;
+        }
     }
 }
 
@@ -326,6 +419,10 @@
         margin-right: auto;
     }
 
+    &__friends {
+        display: flex;
+    }
+
     &__photo {
         box-sizing: content-box;
         height: 4rem;
@@ -334,7 +431,7 @@
         border-radius: 50%;
 
         &:not(:last-child) {
-            margin-right: -1.15rem;
+            margin-right: -2rem;
         }
     }
 }
@@ -348,6 +445,17 @@
     margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+
+    @media only screen and (max-width: $breakp-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    @media only screen and (max-width: $breakp-small) {
+        margin-right: 0;
+    }
+
     &__text {
         margin-bottom: 2rem;
         z-index: 10;
@@ -398,14 +506,24 @@
 ///////////////////////////////////////
 //Call to action
 .cta {
-    padding: 3.5rem;
+    padding: 3.5rem 0;
     text-align: center;
+
+    @media only screen and (max-width: $breakp-medium) {
+        padding: 2.5rem 0;
+    }
 
     &__book-now {
         font-size: 1.9rem;
         font-weight: 300;
         margin-bottom: 2.5rem;
         text-transform: uppercase;
+
+        @media only screen and (max-width: $breakp-smallest) {
+            font-size: 1.6rem;
+            padding: 0 4rem;
+            line-height: 2.4rem;
+        }
     }
 }
 
@@ -425,6 +543,7 @@
         var(--color-primary-light),
         var(--color-primary-dark)
     );
+
     & > * {
         display: inline-block;
         height: 100%;

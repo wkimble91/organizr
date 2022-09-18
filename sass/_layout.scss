@@ -4,6 +4,12 @@
     margin: 8rem auto;
     background-color: var(--color-grey-light-1);
     box-shadow: var(--shadow-dark);
+
+    @media only screen and (max-width: $breakp-largest) {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
 }
 .header {
     font-size: 1.4rem;
@@ -13,25 +19,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
 
-header,
-section {
-    margin-bottom: var(--section-spacing);
-}
-
-header {
-    display: flex;
-    align-items: center;
-}
-@media (max-width: 869px) {
-    header {
-        flex-direction: column;
+    @media only screen and (max-width: $breakp-smallest) {
+        height: 11rem;
+        flex-wrap: wrap;
+        align-content: space-around;
     }
 }
 
 .content {
     display: flex;
+
+    @media only screen and (max-width: $breakp-medium) {
+        flex-direction: column;
+    }
 }
 .sidebar {
     flex: 0 0 18%;
@@ -51,6 +52,14 @@ header {
     padding: 4.5rem;
     background-color: var(--color-grey-light-1);
     border-bottom: var(--line);
+
+    @media only screen and (max-width: $breakp-medium) {
+        padding: 3rem;
+    }
+
+    @media screen and (max-width: $breakp-small) {
+        flex-direction: column;
+    }
 }
 .description {
     background-color: #fff;
@@ -58,6 +67,16 @@ header {
     padding: 3rem;
     flex: 0 0 60%;
     margin-right: 4.5rem;
+
+    @media only screen and (max-width: $breakp-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+
+    @media screen and (max-width: $breakp-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
 }
 .user-reviews {
     flex: 1;
