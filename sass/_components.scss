@@ -421,7 +421,7 @@
     border-radius: 100px;
     border: none;
     background-image: linear-gradient(
-        to right,
+        to left,
         var(--color-primary-light),
         var(--color-primary-dark)
     );
@@ -444,7 +444,7 @@
 
     &:hover {
         background-image: linear-gradient(
-            to left,
+            to right,
             var(--color-primary-light),
             var(--color-primary-dark)
         );
