@@ -539,6 +539,10 @@
     text-transform: uppercase;
     border-radius: 100px;
     border: none;
+
+    // Added by Jacob J. Carter on 29/09/2022
+    cursor: pointer;
+
     background-image: linear-gradient(
         to left,
         var(--color-primary-light),
