@@ -1,2 +1,0 @@
-# organizr
-Social Media Mockup
